@@ -4,10 +4,12 @@ namespace Mission06_Forbush.Models
 {
     public class MovieFormContext : DbContext
     {
-        public MovieFormContext(DbContextOptions<MovieFormContext> options) : base(options) 
+        public MovieFormContext(DbContextOptions<MovieFormContext> options) : base(options)
         {
-        }
 
-        public DbSet<Application> Applications { get; set; }
+        }
+        // Create a public database set of type Movie and Categories
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
